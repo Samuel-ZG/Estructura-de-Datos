@@ -9,7 +9,7 @@ int main() {
 
 	do {
 
-		cout << "\nIngrese la posicion del termino que desea: ";
+		cout << "\nIngrese el numero: ";
 		cin >> n;
 
 		if (n < 0)
