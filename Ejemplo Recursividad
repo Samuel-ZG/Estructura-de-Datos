@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int factorial(int);
+
+int main()
+{
+    int fact, n;
+    do {
+
+        cout << "\nIngrese el valor de n: ";
+        cin >> n;
+
+        if (n < 0)
+            cout << "\nIngrese un valor igual o mayor a 0.\n";
+
+    } while (n < 0);
+
+    fact = factorial(n);
+
+    cout << "\nEl factorial de " << n << " es: " << fact << endl;
+}
+
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return factorial(n - 1) * n;
+}
