@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int Fibonacci(int);
+
+int main() {
+	int n;
+
+	do {
+
+		cout << "\nIngrese la posicion del termino que desea: ";
+		cin >> n;
+
+		if (n < 0)
+			cout << "\nIngrese un numero mayor o igual a 0.\n";
+
+	} while (n < 0);
+	
+	cout << "El termino en la posicion " << n << " es: " << Fibonacci(n);
+
+}
+
+int Fibonacci(int n) {
+	if (n <= 1)
+		return n;
+	else
+		return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
