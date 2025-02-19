@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int SumatoriaRecursiva(int);
+
+int main() {
+	int n;
+
+	do {
+
+		cout << "\nIngrese la posicion del termino que desea: ";
+		cin >> n;
+
+		if (n < 0)
+			cout << "\nIngrese un numero mayor o igual a 0.\n";
+
+	} while (n < 0);
+
+	cout << "La sumatoria de todos los numeros de 1 hasta " << n << " es: " << SumatoriaRecursiva(n);
+
+}
+
+int SumatoriaRecursiva(int n) {
+	if (n == 1)
+		return n;
+	else
+		return n + SumatoriaRecursiva(n - 1);
+}
